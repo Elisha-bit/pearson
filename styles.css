@@ -1,0 +1,613 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b4332;
+    scroll-behavior: smooth;
+  }
+  
+  /* Header Styling */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background-color: #333;
+    color: white;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  header img {
+    width: 100px;
+    height: auto;
+  }
+  
+  nav li {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  nav a:hover {
+    color: #ff9800;
+  }
+  
+  /* Loader Animation */
+  .loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f9fb;
+    transition: opacity 0.80s, visibility 0.80s;
+  }
+  .loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #fdd703;
+    border-bottom-color: green;
+    border-left-color: orange;
+    border-right-color: red;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+  /* Hero Section */
+  .content {
+    text-align: center;
+    padding: 50px;
+    background: url("img/resort-bg.jpg") no-repeat center center/cover;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    color: #f4f4f4;
+  }
+  
+  .content h1 {
+    font-size: 36px;
+  }
+  
+  /* About Section */
+  .about {
+    display: flex;
+    padding: 50px;
+    background-color: white;
+    align-items: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .about-img img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .about-content {
+    padding-left: 30px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .heading span {
+    color: #ff9800;
+  }
+  
+  /* History Section */
+  .history {
+    background-color: #f4f4f4;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .history-img img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .history-content {
+    padding-left: 30px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  /* Gallery Section */
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 30px;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .gallery-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 1rem black;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .gallery-box img {
+    width: 100%;
+    display: block;
+  }
+  
+  .gallery-layer {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    transition: 0.3s;
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
+  
+  .gallery-box:hover .gallery-layer {
+    background: rgba(255, 152, 0, 0.8);
+  }
+  
+.gallery .heading{
+  text-align: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+  /* Contact Section */
+  .contact {
+    background-color: white;
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .input-box {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 15px;
+  }
+  
+  input,
+  textarea {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    width: 90%;
+  }
+  
+  .btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid #ff9800;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
+  }
+  
+  .btn:hover {
+    background-color: #e68900;
+  }
+  
+  @keyframes appear {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+  
+    .about,
+    .history {
+      flex-direction: column;
+      text-align: center;
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+  
+    .about-content,
+    .history-content {
+      padding-left: 0;
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+  
+    .input-box {
+      flex-direction: column;
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+  
+    input,
+    textarea {
+      width: 100%;
+      animation: appear linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 40%;
+    }
+    @keyframes appear {
+      from {
+        opacity: 0;
+        scale: 0.5;
+      }
+      to {
+        opacity: 1;
+        scale: 1;
+      }
+    }
+  }
+  
+
+
+
+
+  /* SEND WEB PAGE */
+  /* General Styles */
+.body1 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #582f0e;
+  scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 50px;
+  background-color: #333;
+  color: white;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+header img {
+  width: 100px;
+  height: auto;
+}
+
+nav li {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+nav a:hover {
+  color: #ff9800;
+}
+
+/* Loader Animation */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f7f9fb;
+  transition: opacity 0.80s, visibility 0.80s;
+}
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid #dddddd;
+  border-top-color: #fdd703;
+  border-bottom-color: green;
+  border-left-color: orange;
+  border-right-color: red;
+  border-radius: 50%;
+  animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* Hero Section */
+.home-content {
+  text-align: center;
+  padding: 50px;
+  background: url("img/resort-bg.jpg") no-repeat center center/cover;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  color: #f4f4f4;
+}
+
+.home-content h1 {
+  font-size: 36px;
+}
+
+/* About Section */
+.about {
+  display: flex;
+  padding: 50px;
+  background-color: white;
+  align-items: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.about-img img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-content {
+  padding-left: 30px;
+}
+
+.heading span {
+  color: #ff9800;
+}
+
+/* History Section */
+.geo{
+  background-color: #f4f4f4;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.goe-img img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.geo-content {
+  padding-left: 30px;
+}
+
+/* Gallery Section */
+.landscape-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 15px;
+  padding: 30px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.landscape-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 1rem black;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.landscape-box img {
+  width: 100%;
+  display: block;
+}
+
+.landscape-layer {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.landscape-box:hover .landscape-layer {
+  background:#ff9800;
+}
+
+.landscape .heading{
+text-align: center;
+}
+
+/* Contact Section */
+.contact {
+  background-color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+
+.btn {
+  background-color: #606c38;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #606c38;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: appear 5s linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 10%;
+}
+
+.btn:hover {
+  background-color: #606c38;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about,
+  .geo {
+    flex-direction: column;
+    text-align: center;
+   
+  }
+
+  .about-content,
+  .geo-content {
+    padding-left: 0;
+   
+  }
+  @keyframes appear {
+    from {
+      opacity: 0;
+      scale: 0.5;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+  .goe-img img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+}
+
+span{
+  color: #ff9800;
+  font-size: x-large;
+}
+
+.MOTAC{
+  display:inline;
+  justify-content: center;
+  align-items: center;
+}
+
+.MOTAC-text{
+  color: #f7f9fb;
+  text-align: center ;
+}
+
+.MOTAC-img{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+
+}
