@@ -69,6 +69,10 @@ body {
     opacity: 0;
     visibility: hidden;
   }
+.landscape-box img:hover {
+  scale: 1.2;
+  transition: 0.3s ease-in-out;
+}
   .loader::after {
     content: "";
     width: 75px;
