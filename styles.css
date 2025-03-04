@@ -6,6 +6,13 @@ body {
     background-color: #1b4332;
     scroll-behavior: smooth;
   }
+
+.logo{
+    font-size: 40px;
+    color: turquoise;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+  }
   
   /* Header Styling */
   header {
